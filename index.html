@@ -16,16 +16,44 @@
       rel="stylesheet"
     />
     <title>Hayley testing</title>
-    <script defer="defer" src="static/js/main.637c0d65.js"></script>
-    <link href="static/css/main.558e1eea.css" rel="stylesheet" />
+    <!-- Embedding chatbot by using bundle JS -->
+    <!-- <link href="static/css/hayley.css" rel="stylesheet" /> -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div style="font-size: 24px; font-family: 'Roboto', sans-serif">
-      This is the empty site for testing Hayley embedding.
-      Please look at the right bottom corner of the page.
+      This is the empty site for testing Hayley embedding. Please look at the
+      right bottom corner of the page.
     </div>
-    <script>
+    <!-- Embedding chatbot by using iframe -->
+    <script type="text/javascript">
+      // create iframe element
+      const hayleyIframe = document.createElement("iframe");
+
+      // set the source of the iframe
+      hayleyIframe.src = "https://hayley-testing.netlify.app";
+
+      // set the style of the iframe
+      hayleyIframe.style.position = "absolute";
+      hayleyIframe.style.bottom = "16px";
+      hayleyIframe.style.right = "16px";
+      hayleyIframe.style.zIndex = "9999";
+
+      // append the iframe to the document body
+      document.body.appendChild(hayleyIframe);
+
+      // add a load event listener to the iframe
+      hayleyIframe.addEventListener("load", function () {
+        // adjust the iframe height and width based on its content size
+        hayleyIframe.style.height =
+          iframe.contentWindow.document.body.scrollHeight + "px";
+        hayleyIframe.style.width =
+          iframe.contentWindow.document.body.scrollWidth + "px";
+      });
+    </script>
+
+    <!-- Embedding chatbot by using bundle JS -->
+    <!-- <script type="text/javascript">
       // create new div element with id "root"
       const newDiv = document.createElement("div");
       newDiv.id = "hayley-area";
@@ -34,5 +62,6 @@
       document.body.appendChild(newDiv);
       var property_id = "1528252253585581240";
     </script>
+    <script defer="defer" src="static/js/hayley.js"></script> -->
   </body>
 </html>
