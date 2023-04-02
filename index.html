@@ -43,20 +43,26 @@
       document.body.appendChild(hayleyIframe);
 
       // add a load event listener to the iframe
-      hayleyIframe.addEventListener("load", function () {
-        hayleyIframe.style.height =
-          hayleyIframe.contentWindow.document.body.scrollHeight + "px";
-        hayleyIframe.style.width =
-          hayleyIframe.contentWindow.document.body.scrollWidth + "px";
+      // hayleyIframe.addEventListener("load", function () {
+      //   hayleyIframe.style.height =
+      //     hayleyIframe.contentWindow.document.body.scrollHeight + "px";
+      //   hayleyIframe.style.width =
+      //     hayleyIframe.contentWindow.document.body.scrollWidth + "px";
 
-        // observe changes to the iframe content size
-        var observer = new MutationObserver(resizeIframe);
-        observer.observe(iframe.contentWindow.document.body, {
-          attributes: true,
-          childList: true,
-          subtree: true,
-        });
-      });
+      //   // observe changes to the iframe content size
+      //   var observer = new MutationObserver(() => {
+      //     hayleyIframe.style.height =
+      //       hayleyIframe.contentWindow.document.body.scrollHeight + "px";
+      //     hayleyIframe.style.width =
+      //       hayleyIframe.contentWindow.document.body.scrollWidth + "px";
+      //   });
+
+      //   observer.observe(iframe.contentWindow.document.body, {
+      //     attributes: true,
+      //     childList: true,
+      //     subtree: true,
+      //   });
+      // });
 
       // passing data to iframe
       hayleyIframe.contentWindow.postMessage(
