@@ -42,17 +42,12 @@
       // append the iframe to the document body
       document.body.appendChild(hayleyIframe);
 
-      // function to resize the iframe
-      function resizeIframe() {
+      // add a load event listener to the iframe
+      hayleyIframe.addEventListener("load", function () {
         hayleyIframe.style.height =
           hayleyIframe.contentWindow.document.body.scrollHeight + "px";
         hayleyIframe.style.width =
           hayleyIframe.contentWindow.document.body.scrollWidth + "px";
-      }
-
-      // add a load event listener to the iframe
-      hayleyIframe.addEventListener("load", function () {
-        resizeIframe();
 
         // observe changes to the iframe content size
         var observer = new MutationObserver(resizeIframe);
