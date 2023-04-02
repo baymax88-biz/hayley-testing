@@ -45,9 +45,9 @@
       // function to resize the iframe
       function resizeIframe() {
         hayleyIframe.style.height =
-          hayleyIframe.contentDocument.body.scrollHeight + "px";
+          hayleyIframe.contentWindow.document.body.scrollHeight + "px";
         hayleyIframe.style.width =
-          hayleyIframe.contentDocument.body.scrollWidth + "px";
+          hayleyIframe.contentWindow.document.body.scrollWidth + "px";
       }
 
       // add a load event listener to the iframe
@@ -56,12 +56,18 @@
 
         // observe changes to the iframe content size
         var observer = new MutationObserver(resizeIframe);
-        observer.observe(iframe.contentDocument.body, {
+        observer.observe(iframe.contentWindow.document.body, {
           attributes: true,
           childList: true,
           subtree: true,
         });
       });
+
+      // passing data to iframe
+      hayleyIframe.contentWindow.postMessage(
+        { property_id: "1528252253585581240" },
+        "*"
+      );
     </script>
 
     <!-- Embedding chatbot by using bundle JS -->
