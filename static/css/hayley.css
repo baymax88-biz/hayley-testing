@@ -139,7 +139,7 @@
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
 }
-#hayley-area .hayley-absolute {
+#hayley-area #hayley-area .hayley-absolute {
   position: absolute !important;
 }
 #hayley-area .hayley-relative {
@@ -412,17 +412,17 @@
   -webkit-user-select: none !important;
   user-select: none !important;
 }
+#hayley-area .hayley-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+#hayley-area .hayley-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
 #hayley-area .hayley-grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
 }
 #hayley-area .hayley-grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
-}
-#hayley-area .hayley-grid-cols-\[12px\] {
-  grid-template-columns: 12px !important;
-}
-#hayley-area .hayley-grid-cols-\[16px\] {
-  grid-template-columns: 16px !important;
 }
 #hayley-area .hayley-flex-col {
   flex-direction: column !important;
@@ -573,10 +573,6 @@
 #hayley-area .hayley-border-transparent {
   border-color: transparent !important;
 }
-#hayley-area .hayley-bg-\[\#DADADA\] {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(218 218 218 / var(--tw-bg-opacity)) !important;
-}
 #hayley-area .hayley-bg-custom-2 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(223 231 238 / var(--tw-bg-opacity)) !important;
@@ -584,6 +580,10 @@
 #hayley-area .hayley-bg-custom-5 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(243 243 243 / var(--tw-bg-opacity)) !important;
+}
+#hayley-area .hayley-bg-custom-6 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(218 218 218 / var(--tw-bg-opacity)) !important;
 }
 #hayley-area .hayley-bg-custom-6\/70 {
   background-color: hsla(0, 0%, 85%, 0.7) !important;
@@ -599,6 +599,9 @@
 #hayley-area .hayley-bg-secondary {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity)) !important;
+}
+#hayley-area .hayley-bg-secondary\/10 {
+  background-color: rgba(51, 51, 51, 0.1) !important;
 }
 #hayley-area .hayley-bg-transparent {
   background-color: initial !important;
@@ -788,31 +791,19 @@
 #hayley-area ::-webkit-scrollbar-thumb:hover {
   background: #424242;
 }
-#hayley-area  .placeholder\:hayley-font-medium::-webkit-input-placeholder {
+.placeholder\:hayley-font-medium::-webkit-input-placeholder {
   font-weight: 500 !important;
 }
-#hayley-area  .placeholder\:hayley-font-medium::placeholder {
+.placeholder\:hayley-font-medium::placeholder {
   font-weight: 500 !important;
 }
-#hayley-area  .placeholder\:hayley-text-gray-400::-webkit-input-placeholder {
+.placeholder\:hayley-text-gray-400::-webkit-input-placeholder {
   --tw-text-opacity: 1 !important;
   color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
 }
-#hayley-area  .placeholder\:hayley-text-gray-400::placeholder {
+.placeholder\:hayley-text-gray-400::placeholder {
   --tw-text-opacity: 1 !important;
   color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
-}
-#hayley-area .hover\:hayley-border-primary:hover {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(38 187 237 / var(--tw-border-opacity)) !important;
-}
-#hayley-area .hover\:hayley-bg-primary:hover {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(38 187 237 / var(--tw-bg-opacity)) !important;
-}
-#hayley-area .hover\:hayley-text-primary:hover {
-  --tw-text-opacity: 1 !important;
-  color: rgb(38 187 237 / var(--tw-text-opacity)) !important;
 }
 #hayley-area .hover\:hayley-text-white:hover {
   --tw-text-opacity: 1 !important;
