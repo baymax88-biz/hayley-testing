@@ -11,13 +11,9 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <title>Hayley testing</title>
     <!-- Embedding chatbot by using bundle JS -->
-    <!-- <link href="static/css/hayley.css" rel="stylesheet" /> -->
+    <link href="static/css/hayley.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -26,7 +22,7 @@
       right bottom corner of the page.
     </div>
     <!-- Embedding chatbot by using iframe -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       // create iframe element
       const hayleyIframe = document.createElement("iframe");
 
@@ -69,18 +65,18 @@
         { property_id: "1528252253585581240" },
         "*"
       );
-    </script>
+    </script> -->
 
     <!-- Embedding chatbot by using bundle JS -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       // create new div element with id "root"
-      const newDiv = document.createElement("div");
-      newDiv.id = "hayley-area";
+      const hayleyArea = document.createElement("div");
+      hayleyArea.id = "hayley-area";
 
       // insert newDiv into the document's body element
-      document.body.appendChild(newDiv);
+      document.body.appendChild(hayleyArea);
       var property_id = "1528252253585581240";
     </script>
-    <script defer="defer" src="static/js/hayley.js"></script> -->
+    <script defer="defer" src="static/js/hayley.js"></script>
   </body>
 </html>
