@@ -69,9 +69,15 @@
 
     <!-- Embedding chatbot by using bundle JS -->
     <script type="text/javascript">
-      // create new div element with id "root"
+      // create new div element with id "hayley-area"
       const hayleyArea = document.createElement("div");
       hayleyArea.id = "hayley-area";
+
+      // set the style of the iframe
+      hayleyArea.style.position = "absolute";
+      hayleyArea.style.bottom = "16px";
+      hayleyArea.style.right = "16px";
+      hayleyArea.style.zIndex = "9999";
 
       // insert newDiv into the document's body element
       document.body.appendChild(hayleyArea);
