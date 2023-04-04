@@ -28,7 +28,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="application/javascript">
+    <script>
       // create iframe element
       const hayleyIframe = document.createElement("iframe");
 
@@ -49,7 +49,9 @@
       // append the iframe to the document body
       document.body.appendChild(hayleyIframe);
 
-      iFrameResize({ log: true }, "#hayley-iframe");
+      setTimeout(() => {
+        iFrameResize({ log: true }, "#hayley-iframe");
+      }, 3000);
     </script>
 
     <!-- Embedding chatbot by using bundle JS -->
