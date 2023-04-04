@@ -22,12 +22,6 @@
       right bottom corner of the page.
     </div>
     <!-- Embedding chatbot by using iframe -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.6/iframeResizer.min.js"
-      integrity="sha512-f0wd6UIvZbsjPNebGx+uMzHmg6KXr1jWvumJDYSEDmwYJYOptZ0dTka/wBJu7Tj80tnCYMKoKicqvZiIc9GJgw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script>
       // create iframe element
       const hayleyIframe = document.createElement("iframe");
@@ -37,6 +31,7 @@
         "https://hayley-testing.netlify.app?property_id=1528252253585581240";
       // hayleyIframe.src =
       //   "http://localhost:3003?property_id=1528252253585581240";
+
       hayleyIframe.id = "hayley-iframe";
 
       // set the style of the iframe
@@ -49,9 +44,13 @@
       // append the iframe to the document body
       document.body.appendChild(hayleyIframe);
 
-      setTimeout(() => {
-        iFrameResize({ log: true }, "#hayley-iframe");
-      }, 3000);
+      // control the size of iframe according to the size of the content window
+      window.addEventListener("message", (event) => {
+        if (event.data.type === "hayley-resize") {
+          hayleyIframe.style.height = event.data.height + "px";
+          hayleyIframe.style.width = event.data.width + "px";
+        }
+      });
     </script>
 
     <!-- Embedding chatbot by using bundle JS -->
